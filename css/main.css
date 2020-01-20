@@ -89,6 +89,12 @@ body {
   text-align: center;
   padding: 200px 0;
   border-bottom: 1px #ebebeb solid;
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.project.fade-in {
+  opacity: 1;
 }
 .project img {
   width: 180px;
