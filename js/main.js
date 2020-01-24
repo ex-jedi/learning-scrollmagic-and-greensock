@@ -8,7 +8,26 @@ let pinIntroScene = new ScrollMagic.Scene({
   duration: '30%',
 })
   .setPin('#intro', { pushFollowers: false })
-  .addTo(controller);
+  .addTo(controller)
+  .addIndicators({
+    name: 'pin one',
+    colorTrigger: 'orange',
+    colorEnd: 'orange',
+  }); // Requires a plugin;
+
+// * Pin again
+let pinIntroSceneTwo = new ScrollMagic.Scene({
+  triggerElement: '#project01',
+  triggerHook: 0.4,
+})
+  .setPin('#intro', { pushFollowers: false })
+  .addTo(controller)
+  .addIndicators({
+    name: 'pin two',
+    colorTrigger: 'purple',
+    colorStart: 'purple',
+    colorEnd: 'red',
+  }); // Requires a plugin;;
 
 // * Collect elements to fade in
 const projects = document.querySelectorAll('.project');
