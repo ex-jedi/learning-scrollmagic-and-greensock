@@ -5,8 +5,9 @@ const controller = new ScrollMagic.Controller();
 let pinIntroScene = new ScrollMagic.Scene({
   triggerElement: '#intro',
   triggerHook: 0,
+  duration: '30%',
 })
-  .setPin('#intro')
+  .setPin('#intro', { pushFollowers: false })
   .addTo(controller);
 
 // * Collect elements to fade in
