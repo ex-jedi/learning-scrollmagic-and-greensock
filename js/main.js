@@ -1,6 +1,14 @@
 // * Init ScrollMagic
 const controller = new ScrollMagic.Controller();
 
+// * Pin intro
+let pinIntroScene = new ScrollMagic.Scene({
+  triggerElement: '#intro',
+  triggerHook: 0,
+})
+  .setPin('#intro')
+  .addTo(controller);
+
 // * Collect elements to fade in
 const projects = document.querySelectorAll('.project');
 let counter = 1;
