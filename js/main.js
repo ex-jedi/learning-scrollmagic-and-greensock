@@ -5,7 +5,7 @@ const controller = new ScrollMagic.Controller();
 let pinIntroScene = new ScrollMagic.Scene({
   triggerElement: '#intro',
   triggerHook: 0,
-  duration: '30%',
+  duration: '25%',
 })
   .setPin('#intro', { pushFollowers: false })
   .addTo(controller)
@@ -18,7 +18,7 @@ let pinIntroScene = new ScrollMagic.Scene({
 // * Pin again
 let pinIntroSceneTwo = new ScrollMagic.Scene({
   triggerElement: '#project01',
-  triggerHook: 0.4,
+  triggerHook: 0.52,
 })
   .setPin('#intro', { pushFollowers: false })
   .addTo(controller)
