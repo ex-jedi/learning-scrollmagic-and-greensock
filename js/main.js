@@ -30,12 +30,18 @@ let pinIntroSceneTwo = new ScrollMagic.Scene({
   }); // Requires a plugin;;
 
 // * Parallax Scene
+
+var parallaxTl = new TimelineMax();
+parallaxTl
+  .from('.content-wrapper', 1, { autoAlpha: 0, ease: Power0.easeNone }, 0.4)
+  .from('.bcg', 0.5, { y: '-50%', ease: Power0.easeNone }, 0);
+
 let slideParallaxScene = new ScrollMagic.Scene({
   triggerElement: '.bcg-parallax',
   triggerHook: 1,
   duration: '150%',
 })
-  .setTween(TweenMax.from('.bcg', 0.5, { y: '-50%', ease: Power0.easeNone }))
+  .setTween(parallaxTl)
   .addTo(controller)
   .addIndicators({
     name: 'parallax',
