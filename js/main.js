@@ -33,8 +33,8 @@ let pinIntroSceneTwo = new ScrollMagic.Scene({
 
 var parallaxTl = new TimelineMax();
 parallaxTl
-  .from('.content-wrapper', 1, { autoAlpha: 0, ease: Power0.easeNone }, 0.4)
-  .from('.bcg', 0.5, { y: '-50%', ease: Power0.easeNone }, 0);
+  .from('.content-wrapper', 0.4, { autoAlpha: 0, ease: Power0.easeNone }, 0.5)
+  .from('.bcg', 2, { y: '-50%', ease: Power0.easeNone }, 0);
 
 let slideParallaxScene = new ScrollMagic.Scene({
   triggerElement: '.bcg-parallax',
