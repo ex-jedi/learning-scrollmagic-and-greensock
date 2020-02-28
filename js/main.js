@@ -57,7 +57,7 @@ let counter = 1;
 projects.forEach(function(item) {
   // * Create Scene
   const ourScene = new ScrollMagic.Scene({
-    triggerElement: item.children[0],
+    triggerElement: item.children,
     // duration: '90%',
     triggerHook: 0.8,
     // reverse: false,
